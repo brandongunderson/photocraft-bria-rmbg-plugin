@@ -5480,7 +5480,7 @@ SOFTWARE.
 
 
 ========================================================================
-photocraft-bria-rmbg 1.0.2
+photocraft-bria-rmbg 1.0.3
 License: MIT OR Apache-2.0
 Source: None
 

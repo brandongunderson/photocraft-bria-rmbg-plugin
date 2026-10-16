@@ -1,7 +1,7 @@
 # BRIA Background Removal 1.0.1 — verification, 2026-10-16
 
 This release fixes native asset loading from the Windows portable installation
-reported by the user. Panel API 2, private SDK/API 0.1, package 2 and persistent
+reported by the user. The then-current Plugin API, private SDK/API 0.1, package 2 and persistent
 worker protocol 2 are retained. There are no new dependencies or editor-core changes.
 Exact current package/source identities are recorded in `artifacts.json`.
 

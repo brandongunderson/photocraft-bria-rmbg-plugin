@@ -3,6 +3,28 @@
 Release history for this standalone PhotoCraft plugin. The first published GitHub release
 is 1.0.2; it includes the earlier 1.0.1 native long-path fix.
 
+## [1.0.3](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin/releases/tag/v1.0.3) - 2026-10-16
+
+### Added
+
+- Opt into PhotoCraft’s explicit GitHub release checks using this plugin’s own repository and
+  exact package asset. Updates require review and confirmation.
+
+### Changed
+
+- Refresh the privately bundled PhotoCraft Plugin API and typed SDK sources.
+- Preserve the stable plugin identity, controls, model choices and native processing protocols.
+- Update independent-build and compatibility documentation.
+
+### Validation
+
+The final descriptor passed 3 panel tests, formatting and all-target Clippy. The unchanged
+native worker previously passed 6 tests and its formatting/Clippy checks. Final release
+packaging, exact GitHub update metadata and current-host conformance passed. Real native
+processing, preview, Apply/Discard, Undo/Redo, stale-source rejection, cancellation and removal
+passed on the final package in isolated stores. See [API compatibility](verification/API-COMPATIBILITY.md)
+for the package hash and limits.
+
 ## [1.0.2](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin/releases/tag/v1.0.2) - 2026-10-16
 
 ### Changed
@@ -27,14 +49,13 @@ is 1.0.2; it includes the earlier 1.0.1 native long-path fix.
 
 ### Compatibility and license
 
-Requires Windows x64, the current panel contract (internal discriminator `2`), package
-format 2, `host.commands.invoke` version 1 and persistent native worker protocol 2. The
+Requires Windows x64, package format 2, `host.commands.invoke` version 1 and persistent native worker protocol 2. The
 native worker component remains version 1.0.1. A discrete GPU is not required.
 
 The BRIA model permits non-commercial use; commercial use requires a separate BRIA
 agreement. Preserve the model terms, runtime notices and provenance when redistributing.
 
-See [migration verification](verification/API2-MIGRATION.md),
+See [API compatibility](verification/API-COMPATIBILITY.md),
 [menu-change verification](verification/TEST-RESULTS.md) and
 [long-path verification](verification/TEST-RESULTS-1.0.1.md) for the recorded checks and
 acceptance limits. [README.md](README.md) contains installation and resource limits.

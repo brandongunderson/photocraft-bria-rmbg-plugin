@@ -4,7 +4,7 @@ The installable artifact is `dist/PhotoCraft-BRIA-RMBG.pcplugin` (169,521,099 by
 about 162 MiB). SHA256:
 `9ae7aee8984fe9a1809008a28eb09255e541208a0e6183b60814b48aeeec7b21`.
 The workspace-root copy is byte-identical. This is a Windows x64 local development
-package, with panel API 2, private SDK/API 0.1, package format 2, image payload 1,
+package, with the then-current Plugin API, private SDK/API 0.1, package format 2, image payload 1,
 and explicitly declared persistent worker protocol 2.
 
 ## Passed

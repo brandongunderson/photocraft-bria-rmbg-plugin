@@ -55,11 +55,33 @@ mod tests {
     use super::*;
 
     fn request(event: &str, values: Value, document: Value) -> EventRequest {
-        photocraft_plugin_sdk::serde_json::from_value(
-            json!({"apiVersion":2,"host":{"version":1,"capabilities":[]},
-            "event":event,"values":values,"document":document,"state":{"retained":true}}),
+        EventRequest::parse(
+            &photocraft_plugin_sdk::serde_json::to_vec(&json!({
+                "apiVersion":1,"host":{"version":1,"capabilities":[]},
+                "event":event,"values":values,"document":document,"state":{"retained":true}
+            }))
+            .unwrap(),
         )
         .unwrap()
+    }
+
+    #[test]
+    fn current_contract_preserves_identity_and_rejects_unknown_versions() {
+        assert_eq!(photocraft_guest_api_version(), 1);
+        let descriptor: Value =
+            photocraft_plugin_sdk::serde_json::from_str(bindings::MANIFEST_JSON).unwrap();
+        assert_eq!(descriptor["apiVersion"], 1);
+        assert_eq!(descriptor["id"], "com.photocraft.bria-rmbg");
+        assert_eq!(descriptor["version"], "1.0.3");
+        let valid = request("init", json!({}), Value::Null);
+        let mut wire = photocraft_plugin_sdk::serde_json::to_value(valid).unwrap();
+        for version in [0, 3] {
+            wire["apiVersion"] = json!(version);
+            assert!(
+                EventRequest::parse(&photocraft_plugin_sdk::serde_json::to_vec(&wire).unwrap())
+                    .is_err()
+            );
+        }
     }
 
     #[test]
@@ -86,13 +108,7 @@ mod tests {
 
     #[test]
     fn observers_unknown_events_and_invalid_actions_never_process() {
-        for event in [
-            "init",
-            "change",
-            "document.changed",
-            "host_response",
-            "unrecognized",
-        ] {
+        for event in ["init", "change", "inspect", "host_response", "unrecognized"] {
             assert!(
                 handle(&request(event, json!({}), Value::Null))
                     .unwrap()
@@ -100,6 +116,14 @@ mod tests {
                     .is_empty()
             );
         }
+        let mut malformed =
+            photocraft_plugin_sdk::serde_json::to_value(request("inspect", json!({}), Value::Null))
+                .unwrap();
+        malformed["event"] = json!("document.changed");
+        assert!(
+            EventRequest::parse(&photocraft_plugin_sdk::serde_json::to_vec(&malformed).unwrap())
+                .is_err()
+        );
         assert!(handle(&request("create", json!({"output":"other"}), json!({}))).is_err());
         assert!(handle(&request("create", json!({}), Value::Null)).is_err());
     }
