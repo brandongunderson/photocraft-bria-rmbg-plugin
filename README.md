@@ -1,6 +1,6 @@
 # PhotoCraft BRIA Background Removal
 
-[Source repository](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin)
+[Source repository](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin) · [Changelog](CHANGELOG.md)
 
 [Download the latest plugin](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin/releases/latest/download/PhotoCraft-BRIA-RMBG.pcplugin) · [All releases](https://github.com/brandongunderson/photocraft-bria-rmbg-plugin/releases)
 
@@ -21,7 +21,7 @@ The redundant quick-action contribution and its submenu have been removed.
 Version 1.0.1 fixes ONNX Runtime and model loading when Windows installation paths
 exceed the traditional 260-character boundary. Native asset paths are resolved to
 Windows' extended-length form before passing them to ONNX. Updates keep the same
-plugin identity; use **Replace existing plugin** when installing this fixed package.
+plugin identity; review the new package and choose **Update plugin** in the manager.
 
 1. In **Plugins → Manage Plugins → Browse**, choose `PhotoCraft-BRIA-RMBG.pcplugin`.
 2. Review the native-code permission and install.

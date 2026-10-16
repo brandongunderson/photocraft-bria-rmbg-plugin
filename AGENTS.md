@@ -17,3 +17,7 @@ job-file access before acknowledgement, and never commit a cancelled result.
 Native code, models, checksums, notices and tests belong here. Preserve the BRIA
 non-commercial notice. Use build.py --check --offline, tests/smoke_worker.py and
 the conformance tool. Record any desktop Apply/Undo acceptance not exercised.
+
+Maintain CHANGELOG.md for this plugin's releases, with version/date, behavior changes and
+compatibility notes. Keep shared platform history in the editor repository. Record future
+changes under Unreleased until publishing a tag; do not retag a release for documentation edits.
