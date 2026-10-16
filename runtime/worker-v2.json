@@ -1,0 +1,14 @@
+{
+  "protocolVersion": 2,
+  "executionProfile": "trustedNative",
+  "operations": ["image"],
+  "idleTimeoutMs": 120000,
+  "requestTimeoutMs": 2700000,
+  "resources": {
+    "cpuUnits": 4,
+    "memoryBytes": 3221225472,
+    "gpuBytes": 0,
+    "tempBytes": 268435456,
+    "cacheBytes": 0
+  }
+}

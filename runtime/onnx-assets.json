@@ -1,0 +1,34 @@
+{
+  "version": "1.22.0",
+  "archiveSha256": "174c616efc0271194488642a72f1a514e01487da4dfe84c49296d66e40ebe0da",
+  "files": [
+    {
+      "path": "bin/onnxruntime.dll",
+      "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-win-x64-1.22.0.zip",
+      "archivePath": "onnxruntime-win-x64-1.22.0/lib/onnxruntime.dll",
+      "sha256": "579b636403983254346a5c1d80bd28f1519cd1e284cd204f8d4ff41f8d711559",
+      "size": 12418080
+    },
+    {
+      "path": "bin/onnxruntime_providers_shared.dll",
+      "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-win-x64-1.22.0.zip",
+      "archivePath": "onnxruntime-win-x64-1.22.0/lib/onnxruntime_providers_shared.dll",
+      "sha256": "ba00ea1ef846c9b909c7854bc56c51051a20f9773b3e1153dda118d4b85d0b93",
+      "size": 22064
+    },
+    {
+      "path": "licenses/onnxruntime-LICENSE",
+      "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-win-x64-1.22.0.zip",
+      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+      "size": 1094,
+      "archivePath": "onnxruntime-win-x64-1.22.0/LICENSE"
+    },
+    {
+      "path": "licenses/onnxruntime-ThirdPartyNotices.txt",
+      "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-win-x64-1.22.0.zip",
+      "sha256": "e00f828e0a33de591a355ae6606d2625f5758da7d2c844db7821c9dd3e3647b6",
+      "size": 333022,
+      "archivePath": "onnxruntime-win-x64-1.22.0/ThirdPartyNotices.txt"
+    }
+  ]
+}

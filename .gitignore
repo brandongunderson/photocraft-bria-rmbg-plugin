@@ -1,0 +1,15 @@
+/target/
+/dist/
+/native/target/
+/runtime/bin/
+/runtime/models/
+__pycache__/
+/verification/work/
+
+# Keep machine-specific validation output and sample photos out of source history.
+/verification/*.json
+/verification/*.log
+/verification/*.png
+/verification/*.jpg
+*.pcplugin
+*.pyc

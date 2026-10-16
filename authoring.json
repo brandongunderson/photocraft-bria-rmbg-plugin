@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "descriptor": {
+    "apiVersion": 2,
+    "id": "com.photocraft.bria-rmbg",
+    "name": "BRIA Background Removal",
+    "version": "1.0.2",
+    "author": "PhotoCraft plugin contributors",
+    "description": "Remove backgrounds locally with BRIA RMBG 1.4. Model license permits non-commercial use; commercial use requires a BRIA agreement.",
+    "permissions": {"documentRead": true, "commands": ["plugin.processImage"]},
+    "capabilities": {"required": [{"id": "host.commands.invoke", "minVersion": 1}], "optional": []},
+    "panel": {
+      "preview": true,
+      "fields": [{"id": "output", "label": "Result", "type": "choice", "options": ["foreground", "background", "mask"], "default": "foreground"}],
+      "buttons": [{"id": "create", "label": "Create result"}]
+    }
+  },
+  "package": {
+    "packageVersion": 2,
+    "module": "plugin.pcext",
+    "native": {"service": "plugin.processImage", "platform": "windows-x86_64", "entry": "bria-rmbg-worker.exe"}
+  }
+}

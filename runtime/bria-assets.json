@@ -1,0 +1,24 @@
+{
+  "model": "briaai/RMBG-1.4",
+  "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+  "files": [
+    {
+      "path": "models/rmbg-1.4.onnx",
+      "url": "https://huggingface.co/briaai/RMBG-1.4/resolve/2ceba5a5efaec153162aedea169f76caf9b46cf8/onnx/model.onnx",
+      "sha256": "8cafcf770b06757c4eaced21b1a88e57fd2b66de01b8045f35f01535ba742e0f",
+      "size": 176153355
+    },
+    {
+      "path": "licenses/BRIA-MODEL-CARD.md",
+      "url": "https://huggingface.co/briaai/RMBG-1.4/resolve/2ceba5a5efaec153162aedea169f76caf9b46cf8/README.md",
+      "sha256": "24e08231e4a1f467f69fd9a5f279c259544212dbeb581c710700f27effd07875",
+      "size": 6395
+    },
+    {
+      "path": "preprocessor_config.json",
+      "url": "https://huggingface.co/briaai/RMBG-1.4/resolve/2ceba5a5efaec153162aedea169f76caf9b46cf8/preprocessor_config.json",
+      "sha256": "6f9c2cfdb87edd9b83c1314629657d5b320a6a89f8481c872a36253132e33afa",
+      "size": 345
+    }
+  ]
+}
